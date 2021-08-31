@@ -46,7 +46,7 @@ const tags = {
     // li: document.createElement('li'),
     form: document.createElement('form'),
     input: document.createElement('input'),
-    button: document.createElement('button')
+    searchButton: document.createElement('button')
 }
 
 //класс аркылы стиль береміз
@@ -91,17 +91,17 @@ classes.input.forEach( item => {
     tags.input.classList.add(item);
 })
 
-tags.button.classList.add(classes.button);
+tags.searchButton.classList.add(classes.button);
 
 classes.button.forEach( item => {
-    tags.button.classList.add(item)
+    tags.searchButton.classList.add(item);
 })
 
-tags.button.innerHTML =
-`Іздеу`;
+tags.searchButton.innerHTML = `Іздеу`;
 
-tags.button.style = `
+tags.searchButton.style = `
 background-color: dodgerblue;
+font-size: 16px; font-family: Arial
 `;
 
 //атрибуттар орнатамыз
@@ -118,9 +118,7 @@ settingAttributes(tags.collapse, 'id', 'navbarSupportedContent');
 settingAttributes(tags.input, 'type', 'search');
 settingAttributes(tags.input, 'placeholder', 'Сайттан іздеу');
 settingAttributes(tags.input, 'aria-label', 'Search');
-settingAttributes(tags.button, 'type', 'submit');
-
-tags.button.style = `font-size: 16px; font-family: Arial`
+settingAttributes(tags.searchButton, 'type', 'submit');
 
 
 console.log(tags.button.innerHTML)
@@ -138,7 +136,7 @@ tags.togglerButton.after(tags.collapse);
 
 tags.form.append(tags.input);
 
-tags.form.append(tags.button);
+tags.form.append(tags.searchButton);
 
 let navLists = '';
 
@@ -150,7 +148,7 @@ function settingNavigationLists() {
                     <ul class="${classes.ul} mr-auto"></ul>
                 </div>
                 <div class="col-1">
-                    ${tags.button.outerHTML}
+                    ${tags.searchButton.outerHTML}
                 </div>
                 <div class="col-3">
                         ${tags.form.outerHTML}
