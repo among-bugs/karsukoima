@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'NavigationButtonsFont';
+    src: url('../fonts/Vollkorn-Italic-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Monrope';
+    src: url('../fonts/Manrope/Manrope-VariableFont_wght.ttf');
+}
