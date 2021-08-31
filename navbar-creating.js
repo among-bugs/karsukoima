@@ -150,7 +150,7 @@ function settingNavigationLists() {
                     <ul class="${classes.ul} mr-auto"></ul>
                 </div>
                 <div class="col-1">
-                    
+                    ${tags.button.outerHTML}
                 </div>
                 <div class="col-3">
                         ${tags.form.outerHTML}
